@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 220 25% 7%;
+    --foreground: 210 40% 98%;
+    --card: 222 22% 12%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 22% 12%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 153 47% 49%; /* Vue Green #42b883 */
+    --primary-foreground: 150 80% 5%;
+    --secondary: 217 19% 27%; /* Vue Navy #35495e */
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 19% 18%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 217 19% 20%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 19% 18%;
+    --input: 217 19% 15%;
+    --ring: 153 47% 49%;
+    --radius: 0.75rem;
+
+    /* Vue Direct Color Tokens */
+    --vue-green: #42b883;
+    --vue-green-hover: #33a06f;
+    --vue-green-light: #52d699;
+    --vue-green-bg: rgba(66, 184, 131, 0.12);
+    --vue-green-border: rgba(66, 184, 131, 0.3);
+    --vue-navy: #35495e;
+    --vue-dark: #0e1117;
+  }
+}
+
+@theme {
+  --color-vue-green: var(--vue-green);
+  --color-vue-green-hover: var(--vue-green-hover);
+  --color-vue-green-light: var(--vue-green-light);
+  --color-vue-green-bg: var(--vue-green-bg);
+  --color-vue-navy: var(--vue-navy);
+  --color-vue-dark: var(--vue-dark);
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar with Tailwind & Vue Green */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0e1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #252b3b;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #42b883;
+}
